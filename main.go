@@ -395,7 +395,7 @@ const fileListTpl = `<!DOCTYPE html>
   </div>
 
   <div class="footer">
-    GinMiniServer v{{.Version}} · <a href="https://github.com/charmbracelet/bubbletea">Powered by Gin + Bubble Tea</a>
+    GinMiniServer v{{.Version}} · <a href="https://github.com/Moxin1044/GinMiniServer">Powered by Moxin1044</a>
   </div>
 </div>
 <script>
