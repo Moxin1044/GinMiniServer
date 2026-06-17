@@ -1,0 +1,19 @@
+# 构建产物
+*.exe
+*.exe~
+GinMiniServer
+GinMiniServer-*
+
+# 日志目录
+logs/
+*.log
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 操作系统
+.DS_Store
+Thumbs.db
