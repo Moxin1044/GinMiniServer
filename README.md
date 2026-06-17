@@ -131,8 +131,6 @@ go build -ldflags="-s -w" -o GinMiniServer .
 GOOS=linux GOARCH=arm64 go build -ldflags="-s -w" -o GinMiniServer .
 ```
 
-Windows 环境可使用 `build.bat` 一键构建所有平台。
-
 ## 自动发布
 
 本项目使用 GitHub Actions 实现 CI/CD：
