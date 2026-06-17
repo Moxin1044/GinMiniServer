@@ -94,9 +94,16 @@ jobs:
         run: |
           mkdir -p release-assets
           find artifacts -type f -name 'GinMiniServer*' | while read f; do
-            dir=$(dirname "$f" | sed 's|artifacts/||')
+            # 路径形如 artifacts/GinMiniServer-<os>-<arch>/[<os>-<arch>/]GinMiniServer[.exe]
+            rel=${f#artifacts/}
+            artifact_name=$(echo "$rel" | cut -d'/' -f1)
+            osarch=${artifact_name#GinMiniServer-}
             base=$(basename "$f")
-            cp "$f" "release-assets/${dir}-${base}"
+            ext=""
+            case "$base" in
+              *.exe) ext=".exe" ;;
+            esac
+            cp "$f" "release-assets/GinMiniServer-${osarch}${ext}"
           done
           ls -la release-assets/
 
